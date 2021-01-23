@@ -344,6 +344,10 @@ body {
   text-transform: uppercase;
 
   color: #ffffff;
+
+  transition-property: border;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .sub-form {
@@ -740,6 +744,8 @@ body {
   top: 50%;
   left: 50%;
 
+  padding: 40px;
+
   width: 528px;
   height: 581px;
 
@@ -751,7 +757,140 @@ body {
   transform: translate(-50%, -50%) scale(1) rotate(360deg);
   transition: transform var(--time-duration) var(--cubic);
 }
+/* Заголовок модального окна */
+.modal-title {
+  margin-bottom: 12px;
 
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--pri-text-color);
+}
+
+/* Данные пользователя */
+.modal-form {
+  margin-bottom: 20px;
+}
+
+.modal-form .field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--sec-text-color);
+
+  cursor: pointer;
+}
+
+.input-block {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
+}
+
+.input-block > .icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+
+  transition-property: fill;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+.input-block:focus-within > .input {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.input-block:focus-within > .icon {
+  fill: var(--accent-color);
+}
+
+/* Комментарий */
+.comment {
+  width: 100%;
+  height: 120px;
+
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
+
+  resize: none;
+}
+
+.comment:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+/* Чекбокс */
+
+
+/* Кнопка отправки формы */
+.submit-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: #ffffff;
+  background-color: var(--accent-color);
+  
+  border-radius: 4px;
+  border-color: transparent;
+
+  transition-property: backgroung-color, box-shadow;
+  transition-duration: var(--time-duration);
+  transition-timing-function: var(--cubic);
+
+  cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {    
+  background-color: #188CE8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Кнопка закрытия формы */
 .close-button {
   position: absolute;
   top: 8px;

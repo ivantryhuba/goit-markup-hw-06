@@ -74,7 +74,9 @@
             <h1 class="hero-title title">
               Эффективные решения для вашего бизнеса
             </h1>
-            <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
+            <button class="hero-button" type="button" data-modal-open>
+              Заказать услугу
+            </button>
           </div>
         </div>
       </section>
@@ -145,7 +147,7 @@
           <ul class="we-do-list list">
             <li class="item">
               <div class="we-do-card">
-                <img src="./images/studio/box1.jpg" alt="Десктопные решения"/>
+                <img src="./images/studio/box1.jpg" alt="Десктопные решения" />
                 <div class="label">
                   <h3 class="title">Десктопные приложения</h3>
                 </div>
@@ -153,7 +155,10 @@
             </li>
             <li class="item">
               <div class="we-do-card">
-                <img src="./images/studio/box2.jpg" alt="Мобильные приложения"/>
+                <img
+                  src="./images/studio/box2.jpg"
+                  alt="Мобильные приложения"
+                />
                 <div class="label">
                   <h3 class="title">Мобильные приложения</h3>
                 </div>
@@ -161,11 +166,14 @@
             </li>
             <li class="item">
               <div class="we-do-card">
-                <img src="./images/studio/box3.jpg" alt="Дизайнерские решения"/>
+                <img
+                  src="./images/studio/box3.jpg"
+                  alt="Дизайнерские решения"
+                />
                 <div class="label">
                   <h3 class="title">Дизайнерские решения</h3>
                 </div>
-              </div>       
+              </div>
             </li>
           </ul>
         </div>
@@ -440,14 +448,19 @@
           <div class="subscription">
             <p class="text">Подпишитесь на рассылку</p>
             <form class="sub-form">
-              <input class="sub-input" type="email" name="sub-mail" placeholder="E-mail">
+              <input
+                class="sub-input"
+                type="email"
+                name="sub-mail"
+                placeholder="E-mail"
+              />
               <button class="sub-button" type="submit">
                 Подписаться
                 <svg class="icon" width="24" height="24">
                   <use href="./images/svg/sprite.svg#icon-subscribe"></use>
                 </svg>
               </button>
-            </form>            
+            </form>
           </div>
         </div>
       </div>
@@ -456,6 +469,62 @@
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <h2 class="modal-title title">
+          Оставьте свои данные, мы вам перезвоним
+        </h2>
+        <div class="modal-form">
+          <!-- Имя -->
+          <div class="field">
+            <label class="field-label" for="name">Имя</label>
+            <div class="input-block">
+              <input class="input" type="text" name="name" id="name" />
+              <svg class="icon" width="12" height="12">
+                <use href="./images/svg/sprite.svg#icon-modal-name"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Телефон -->
+          <div class="field">
+            <label class="field-label" for="telephone">Телефон</label>
+            <div class="input-block">
+              <input class="input" type="tel" name="telephone" id="telephone" />
+              <svg class="icon" width="13" height="13">
+                <use href="./images/svg/sprite.svg#icon-modal-tel"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Почта -->
+          <div class="field">
+            <label class="field-label" for="email">Почта</label>
+            <div class="input-block">
+              <input class="input" type="email" name="email" id="email" />
+              <svg class="icon" width="15" height="12">
+                <use href="./images/svg/sprite.svg#icon-modal-mail"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Комментарий -->
+          <div class="field">
+            <label class="field-label" for="comment">Комментарий</label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+        </div>
+
+        <button class="submit-button" type="submit">
+          Отправить
+        </button>
+
+        <!-- Кнопка закрытия -->
         <button class="close-button" type="button" data-modal-close>
           <svg class="icon" width="11" height="11">
             <use href="./images/svg/sprite.svg#icon-modal-close"></use>
@@ -463,7 +532,7 @@
         </button>
       </div>
     </div>
-    
+
     <!-- Скрипт открытия-закрытия модального окна -->
     <script src="./js/modal.js"></script>
   </body>
